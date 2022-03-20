@@ -18,6 +18,9 @@
     <item row="0" column="0">
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
+       <widget class="QTextEdit" name="textEdit"/>
+      </item>
+      <item>
        <widget class="QLineEdit" name="Input_1">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">

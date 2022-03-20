@@ -18,36 +18,80 @@ public:
     QLineEdit* Input_2 = new QLineEdit();
     QLineEdit* Output = new QLineEdit();
 
-    CalcMainWindow(QWidget* parent = nullptr): QMainWindow(parent){}
+    CalcMainWindow(QWidget* parent = nullptr): QMainWindow(parent)
+    {
+        qDebug() << "CalcMainWindow created";
+        Input_1->setText("0");
+        Input_2->setText("0");
+        Output->setText("0");
+        qDebug() << Input_1->text() << Input_2->text() << Output->text();
+    }
 
 public slots:
     void sum()
     {
+        qDebug() << "\ncall sum()";
         int x = 0, y = 0;
 
-        x = Input_1->text().toInt();
-        y = Input_2->text().toInt();
-
+        x = Input_1->text().toDouble();
+        y = Input_2->text().toDouble();
         qDebug() << x << " + " << y << " = " << x + y;
 
-        QString str = Input_1->text() + " + " + Input_1->text() + " = " + QString::number(x+y);
+        QString str = Input_1->text() + " + " + Input_2->text() + " = " + QString::number(x+y);
+        qDebug() << "print string at sum(): " << Input_1->text() << " + " << Input_2->text();
 
         Output->setText(str);
     };
 
     void divide()
     {
-        QString str = "divide";
+        qDebug() << "\ncall divide()";
+        int x = 0, y = 0;
+
+        x = Input_1->text().toDouble();
+        y = Input_2->text().toDouble();
+
+        if(y == 0){
+            Output->setText("нельзя делить на НОЛЬ");
+            return;
+        }
+
+        qDebug() << x << " / " << y << " = " << x + y;
+
+        QString str = Input_1->text() + " / " + Input_2->text() + " = " + QString::number(x/y);
+        qDebug() << "print string at sum(): " << Input_1->text() << " / " << Input_2->text();
+
         Output->setText(str);
+
     };
     void multy()
     {
-        QString str = "multy";
+        qDebug() << "\ncall multy()";
+        int x = 0, y = 0;
+
+        x = Input_1->text().toDouble();
+        y = Input_2->text().toDouble();
+        qDebug() << x << " * " << y << " = " << x * y;
+
+        QString str = Input_1->text() + " * " + Input_2->text() + " = " + QString::number(x*y);
+        qDebug() << "print string at sum(): " << Input_1->text() << " * " << Input_2->text();
+
+        Output->setText(str);
         Output->setText(str);
     };
     void minus()
     {
-        QString str = "minus";
+        qDebug() << "\ncall minus()";
+        int x = 0, y = 0;
+
+        x = Input_1->text().toDouble();
+        y = Input_2->text().toDouble();
+        qDebug() << x << " - " << y << " = " << x - y;
+
+        QString str = Input_1->text() + " - " + Input_2->text() + " = " + QString::number(x-y);
+        qDebug() << "print string at sum(): " << Input_1->text() << " - " << Input_2->text();
+
+        Output->setText(str);
         Output->setText(str);
     };
 };
