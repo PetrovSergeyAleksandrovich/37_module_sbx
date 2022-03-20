@@ -99,7 +99,6 @@ public slots:
     void slider()
     {
         qDebug() << "\ncall test()";
-        hSlider->valueChanged(Input_1->text().toInt());
         qDebug() << hSlider->value();
         Output->setText(QString::number(hSlider->value()));
     }
