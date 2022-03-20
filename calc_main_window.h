@@ -7,27 +7,31 @@
 
 #include <QMainWindow>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QTextEdit>
-#include <iostream>
+#include <QDebug>
 
 class CalcMainWindow: public QMainWindow
 {
     Q_OBJECT
 public:
 
-    QLineEdit* Input_1 = nullptr;
-    QLineEdit* Input_2 = nullptr;
-    QLineEdit* Output = nullptr;
+    QLineEdit* Input_1 =  new QLineEdit();
+    QLineEdit* Input_2 = new QLineEdit();
+    QLineEdit* Output = new QLineEdit();
 
     CalcMainWindow(QWidget* parent = nullptr): QMainWindow(parent){}
 
 public slots:
     void sum()
     {
-        QString x = Input_1->text();
-        QString y = Input_2->text();
+        int x = 0, y = 0;
 
-        QString str = "sum = " + x + y;
+        x = Input_1->text().toInt();
+        y = Input_2->text().toInt();
+
+        qDebug() << x << " + " << y << " = " << x + y;
+
+        QString str = Input_1->text() + " + " + Input_1->text() + " = " + QString::number(x+y);
+
         Output->setText(str);
     };
 
