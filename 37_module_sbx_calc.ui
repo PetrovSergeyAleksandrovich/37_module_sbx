@@ -6,24 +6,23 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>377</width>
-    <height>440</height>
+    <width>340</width>
+    <height>361</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>480</width>
+    <height>480</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="0">
+    <item row="1" column="0">
      <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QSlider" name="hSlider">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
       <item>
        <widget class="QLineEdit" name="Input_1">
         <property name="sizePolicy">
@@ -217,7 +216,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>377</width>
+     <width>340</width>
      <height>21</height>
     </rect>
    </property>
@@ -225,93 +224,5 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>Sum</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>sum()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>74</x>
-     <y>329</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>70</x>
-     <y>360</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>Minus</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>minus()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>166</x>
-     <y>329</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>160</x>
-     <y>360</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>Divide</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>divide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>247</x>
-     <y>329</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>258</x>
-     <y>360</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>Multiply</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>multy()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>329</x>
-     <y>329</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>329</x>
-     <y>360</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>hSlider</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>MainWindow</receiver>
-   <slot>slider()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>53</x>
-     <y>44</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>6</x>
-     <y>67</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
- <slots>
-  <slot>sum()</slot>
-  <slot>divide()</slot>
-  <slot>minus()</slot>
-  <slot>multy()</slot>
-  <slot>slider()</slot>
- </slots>
+ <connections/>
 </ui>
