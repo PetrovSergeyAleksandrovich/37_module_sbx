@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>340</width>
+    <width>411</width>
     <height>361</height>
    </rect>
   </property>
@@ -216,13 +216,98 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>340</width>
+     <width>411</width>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+  </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>Sum</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sum()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>50</x>
+     <y>315</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>10</x>
+     <y>338</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Minus</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>minus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>338</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Divide</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>divide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>271</x>
+     <y>306</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>210</x>
+     <y>340</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Multiply</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>multy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>366</x>
+     <y>307</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>340</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>sum()</slot>
+  <slot>divide()</slot>
+  <slot>minus()</slot>
+  <slot>multy()</slot>
+ </slots>
 </ui>

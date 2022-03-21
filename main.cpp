@@ -1,5 +1,4 @@
 #include <QApplication>
-#include "./ui_37_module_sbx_calc.h"
 #include "calc_main_window.h"
 
 int main(int argc, char *argv[])
